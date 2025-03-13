@@ -41,19 +41,19 @@ class SignupPage extends React.Component {
                         ĐĂNG KÝ
                     </h4>
                     <div className="signup__input">
-                        <label htmlFor="name">Họ và tên *</label>
+                        <label htmlFor="name">Họ và tên </label>
                         <input id="name" type="text" name="name" placeholder="Họ tên đầy đủ" required />
                     </div>
                     <div className="signup__input">
-                        <label htmlFor="email">Email *</label>
+                        <label htmlFor="email">Email </label>
                         <input id="email" type="email" name="email" placeholder="Nhập email" required />
                     </div>
                     <div className="signup__input">
-                        <label htmlFor="password">Mật khẩu *</label>
+                        <label htmlFor="password">Mật khẩu </label>
                         <input id="password" type="password" name="password" placeholder="Nhập mật khẩu" required />
                     </div>
                     <div className="signup__input">
-                        <label htmlFor="re-password">Nhập lại mật khẩu *</label>
+                        <label htmlFor="re-password">Nhập lại mật khẩu </label>
                         <input id="re-password" type="password" name="re-password" placeholder="Nhập lại mật khẩu" required />
                     </div>
                     <button type="submit" id="signUpBtn">ĐĂNG KÝ</button>

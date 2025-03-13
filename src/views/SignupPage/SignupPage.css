@@ -15,6 +15,14 @@ label {
     font-weight: bold;
 }
 
+label[for="name"]::after,
+label[for="email"]::after,
+label[for="password"]::after,
+label[for="re-password"]::after {
+    content: "*";
+    color: red;
+  }
+
 .signup__container {
     display: flex;
     flex-direction: column;

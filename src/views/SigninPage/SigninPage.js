@@ -13,11 +13,11 @@ class SigninPage extends React.Component {
                         ĐĂNG NHẬP
                     </h4>
                     <div className="signin__input">
-                        <label htmlFor="email">Email *</label>
+                        <label htmlFor="email">Email </label>
                         <input id="email" type="email" name="email" placeholder="Nhập email" required />
                     </div>
                     <div className="signin__input">
-                        <label htmlFor="password">Mật khẩu *</label>
+                        <label htmlFor="password">Mật khẩu </label>
                         <input id="password" type="password" name="password" placeholder="Nhập mật khẩu" required />
                     </div>
                     <button type="submit" id="signInBtn">ĐĂNG NHẬP</button>
