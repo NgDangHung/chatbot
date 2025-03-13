@@ -12,6 +12,9 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Switch>
+            <Route path="/" exact>
+              <SigninPage />
+            </Route>
             <Route path="/signin">
               <SigninPage />
             </Route>
