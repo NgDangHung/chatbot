@@ -72,3 +72,16 @@ input {
     background-color: rgb(26,78,218, 0.8);
     cursor: pointer
 }
+
+.password-input-wrapper {
+    position: relative;
+  }
+  
+.password-toggle {
+    color: black;
+    position: absolute;
+    right: 10px;
+    top: 67%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

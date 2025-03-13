@@ -79,3 +79,15 @@ input {
 }
 
 
+.password-input-wrapper {
+    position: relative;
+  }
+  
+.password-toggle {
+    color: black;
+    position: absolute;
+    right: 10px;
+    top: 67%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
