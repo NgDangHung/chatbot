@@ -3,30 +3,12 @@ import './SigninPage.css';
 import {
     NavLink
 } from "react-router-dom";
+import PasswordToggle from "../../component/PasswordToggle";
+
 
 class SigninPage extends React.Component {
-
-    state = {
-        showPassword: false
-    }
-
-    togglePassword = () => {
-        const passwordInput = document.getElementById('password');
-        const passwordToggle = document.getElementById('password-toggle');
-        if (this.state.showPassword) {
-            passwordInput.type = 'password';
-            passwordToggle.innerHTML = '️:D';
-        } else {
-            passwordInput.type = 'text';
-            passwordToggle.innerHTML = '️:X';
-        }
-        this.setState({
-            showPassword: !this.state.showPassword
-        });
-    }
-
     render() {
-        let { showPassword } = this.state;
+
         return (
 
             <div className="signin__coverdiv">
@@ -40,9 +22,7 @@ class SigninPage extends React.Component {
                     </div>
                     <div className="signin__input password-input-wrapper">
                         <label htmlFor="password">Mật khẩu </label>
-                        <input id="password" type={showPassword ? "text" : "password"} name="password" placeholder="Nhập mật khẩu" required />
-                        <span className="password-toggle" id="password-toggle" onClick={() => this.togglePassword()}>:D
-                        </span>
+                        <PasswordToggle id="password" name="password" placeholder="Nhập mật khẩu" />
                     </div>
                     <button type="submit" id="signInBtn">ĐĂNG NHẬP</button>
                     <p>Bạn chưa có tài khoản? <a href="/signup">Đăng ký</a></p>

@@ -83,7 +83,7 @@ input {
     position: relative;
   }
   
-.password-toggle {
+.password-toggle #re-password-toggle {
     color: black;
     position: absolute;
     right: 10px;

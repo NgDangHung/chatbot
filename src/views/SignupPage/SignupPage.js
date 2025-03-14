@@ -3,30 +3,11 @@ import './SignupPage.css';
 import {
     NavLink
 } from "react-router-dom";
+import PasswordToggle from "../../component/PasswordToggle";
 
 class SignupPage extends React.Component {
 
-    state = {
-        showPassword: false
-    }
-
-    togglePassword = () => {
-        const passwordInput = document.getElementById('password');
-        const passwordToggle = document.getElementById('password-toggle');
-        if (this.state.showPassword) {
-            passwordInput.type = 'password';
-            passwordToggle.innerHTML = '️:D';
-        } else {
-            passwordInput.type = 'text';
-            passwordToggle.innerHTML = '️:X';
-        }
-        this.setState({
-            showPassword: !this.state.showPassword
-        });
-    }
-
     render() {
-        let { showPassword } = this.state;
         return (
             <div className="signup__coverdiv">
                 <form className="signup__container">
@@ -43,13 +24,12 @@ class SignupPage extends React.Component {
                     </div>
                     <div className="signup__input password-input-wrapper">
                         <label htmlFor="password">Mật khẩu </label>
-                        <input id="password" type={showPassword ? "text" : "password"} name="password" placeholder="Nhập mật khẩu" required />
-                        <span className="password-toggle" id="password-toggle">️:D</span>
+                        <PasswordToggle id="password" name="password" placeholder="Nhập mật khẩu" />
                     </div>
                     <div className="signup__input password-input-wrapper">
                         <label htmlFor="re-password">Nhập lại mật khẩu </label>
-                        <input id="re-password" type={showPassword ? "text" : "password"} name="re-password" placeholder="Nhập lại mật khẩu" required />
-                        <span className="password-toggle" id="password-toggle" onClick={() => this.togglePassword()}>️:D</span>
+
+                        <PasswordToggle id="re-password" name="re-password" placeholder="Nhập lại mật khẩu" />
                     </div>
                     <button type="submit" id="signUpBtn">ĐĂNG KÝ</button>
                     <a href="/signin">Đăng nhập</a>
